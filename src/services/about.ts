@@ -1,4 +1,4 @@
-import IAbout from "../types/about"
+import IAbout from "../interfaces/about"
 import intansce from "./intansce"
 
 export const GetAllAbout = () => {

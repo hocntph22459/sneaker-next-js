@@ -1,4 +1,4 @@
-import { IProduct } from "../types/product"
+import { IProduct } from "../interfaces/product"
 import intansce from "./intansce"
 export const GetAllProduct = () => {
     return intansce.get('/products')

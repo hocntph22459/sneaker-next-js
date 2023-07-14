@@ -1,4 +1,4 @@
-import IUser from "../types/user"
+import IUser from "../interfaces/user"
 import intansce from "./intansce"
 
 export const Signup = (data:IUser) => {

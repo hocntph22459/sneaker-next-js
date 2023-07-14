@@ -26,10 +26,9 @@ const FindProduct = (props: Props) => {
                             </div>
                             <div className="p-5 bg-gray-50 dark:bg-gray-900">
                                 <div className="flex items-center justify-between mb-4">
-                                    <h3 className="text-xl font-medium dark:text-gray-400">
+                                    <h3 className="text-xl font-medium truncate dark:text-gray-400">
                                         {product.name}
                                     </h3>
-
                                 </div>
                                 <div className="flex items-center justify-between">
                                     <div className='mb-4'>

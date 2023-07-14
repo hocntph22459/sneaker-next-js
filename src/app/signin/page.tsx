@@ -7,7 +7,7 @@ import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
 import { AxiosResponse } from 'axios';
 import { useRouter } from 'next/router';
 import IUser, { LoginResponse } from '@/interfaces/user';
-import { Signin } from '@/api/auth';
+import { Signin } from '@/services/auth';
 const MyFormItemContext = React.createContext<(string | number)[]>([]);
 
 function toArr(str: string | number | (string | number)[]): (string | number)[] {

@@ -1,4 +1,4 @@
-import IComment from "../types/comment"
+import IComment from "../interfaces/comment"
 import intansce from "./intansce"
 
 export const GetAllComment = () => {

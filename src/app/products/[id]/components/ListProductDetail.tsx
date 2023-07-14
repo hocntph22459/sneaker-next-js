@@ -1,20 +1,19 @@
 import { Carousel, Form, FormItemProps, Image, Input, Select, message } from 'antd'
-import { Link } from 'react-router-dom'
-import { IProductDetail } from '../../../../types/product';
 import { useDispatch } from 'react-redux';
-import { IProduct } from '../../../../types/product'
-import { addToCart } from '../../../../redux/actions/cart/cartActions';
+import { addtoCart } from '../../../../redux/actions/cart/cartActions';
 import { createContext, useContext } from 'react';
+import Link from 'next/link';
+import { IProduct, IProductDetail } from '@/interfaces/product';
 type Props = {
     product: IProductDetail
 }
 const MyFormItemContext = createContext<(string | number)[]>([]);
-function toArr(str: string | number | (string | number)[]): (string | number)[] {
+function hrefArr(str: string | number | (string | number)[]): (string | number)[] {
     return Array.isArray(str) ? str : [str];
 }
 const MyFormItem = ({ name, ...props }: FormItemProps) => {
     const prefixPath = useContext(MyFormItemContext);
-    const concatName = name !== undefined ? [...prefixPath, ...toArr(name)] : undefined;
+    const concatName = name !== undefined ? [...prefixPath, ...hrefArr(name)] : undefined;
     return <Form.Item name={concatName} {...props} />;
 };
 
@@ -29,17 +28,17 @@ const ListProductDetail = (props: Props) => {
         const key = 'loading'
         const loading = await message.loading({ content: 'loading!', key, duration: 2 })
         if (loading) {
-            message.success('add to cart successfully')
-            dispatch(addToCart(cartData));
+            message.success('add href cart successfully')
+            dispatch(addhrefCart(cartData));
         }
     };
     return (
         <section className="py-10 font-poppins dark:bg-gray-800">
-            <p className=" focus:outline-none px-4 mb-4 focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 font-normal text-base leading-4 text-gray-600"><Link to="/">Home</Link> / <Link to="/products">products</Link> / {props.product.data.name}</p>
-            <div key={props.product.data._id} className=" px-4 mx-auto">
+            <p className=" focus:outline-none px-4 mb-4 focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 font-normal text-base leading-4 text-gray-600"><Link href="/">Home</Link> / <Link href="/products">products</Link> / {props.product.data.name}</p>
+            <div key={props.product.data._id} className=" px-4 mx-auhref">
                 <div className="flex flex-wrap mb-24 -mx-4">
                     <div className="w-full px-4 mb-8 md:w-1/2 md:mb-0">
-                        <div className="sticky top-0 overflow-hidden ">
+                        <div className="sticky hrefp-0 overflow-hidden ">
                             <div className="relative mb-6 lg:mb-10 lg:h-96">
                                 <Carousel autoplay>
                                     {props.product.data.images.map((image, index) => (
@@ -133,7 +132,7 @@ const ListProductDetail = (props: Props) => {
                                     <button
                                         className="w-full px-4 py-3 text-center bg-black text-white rounded-xl"
                                     >
-                                        Add to cart
+                                        Add href cart
                                     </button>
                                 </div>
                             </div>

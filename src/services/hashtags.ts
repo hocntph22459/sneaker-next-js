@@ -1,4 +1,4 @@
-import IhashTag from "../types/hashtag"
+import IhashTag from "../interfaces/hashtag"
 import intansce from "./intansce"
 
 export const GetAllHashtag = () => {

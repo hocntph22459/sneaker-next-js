@@ -1,4 +1,4 @@
-import { IProductDetail } from "../../../../types/product";
+import { IProductDetail } from "@/interfaces/product";
 import ModalAddtocart from "../../../../components/ModalAddtocart";
 type Props = {
     product: IProductDetail

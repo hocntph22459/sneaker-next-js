@@ -1,4 +1,4 @@
-import IBill from "../types/bill"
+import IBill from "../interfaces/bill"
 import intansce from "./intansce"
 
 export const GetAllBill = () => {

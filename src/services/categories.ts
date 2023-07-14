@@ -1,4 +1,4 @@
-import { ICategory } from "../types/category"
+import { ICategory } from "../interfaces/category"
 import intansce from "./intansce"
 
 export const GetAllCategory = () => {

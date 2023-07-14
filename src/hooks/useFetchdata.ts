@@ -13,7 +13,6 @@ intansce.interceptors.request.use(function (config) {
 });
 
 intansce.interceptors.response.use(function (response) {
-
     return response.data;
 }, function (error) {
     return Promise.reject(error);
@@ -27,9 +26,7 @@ const useFetchData = (url: string) => {
         const fetchData = async () => {
             try {
                 const result = await intansce.get(url);
-                setTimeout(() => {
                     setLoading(false);
-                }, 2000);
                 setError(null)
                 setData(result.data);
             } catch (error: any) {

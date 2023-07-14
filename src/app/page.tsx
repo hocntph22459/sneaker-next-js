@@ -1,5 +1,5 @@
 "use client"
-import { FindProductByPrice, SearchProduct } from '@/api/product';
+import { FindProductByPrice, SearchProduct } from '@/services/product';
 import { IProduct } from '@/interfaces/product';
 import Link from 'next/link';
 import { useState } from 'react';
