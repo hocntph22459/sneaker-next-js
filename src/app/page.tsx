@@ -14,10 +14,10 @@ export default function Home() {
   const handleSearch = async (value: string) => {
     try {
       setQuery(value);
-      const response = await SearchProduct(value)
-      message.success('successfully product search')
+      const response: any = await SearchProduct(value)
+      message.success(response.message)
       setProducts(response.data);
-    } catch (error: any) {
+    } catch (error) {
       message.warning('No products found');
     }
   };
@@ -26,10 +26,10 @@ export default function Home() {
   const handleFilter = async () => {
     try {
       setQuery([minPrice, maxPrice]);
-      const response = await FindProductByPrice(minPrice, maxPrice);
-      message.success('successfully product search')
+      const response: any = await FindProductByPrice(minPrice, maxPrice);
+      message.success(response.message)
       setProducts(response.data);
-    } catch (error: any) {
+    } catch (error) {
       message.warning('No products found');
     }
   };

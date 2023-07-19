@@ -27,7 +27,7 @@ const FilterProductByPrice = (props: Props) => {
                             </div>
                             <div className="p-5 bg-gray-50 dark:bg-gray-900">
                                 <div className="flex items-center justify-between mb-4">
-                                    <h3 className="text-xl font-medium truncate dark:text-gray-400 truncate">
+                                    <h3 className="text-xl font-medium dark:text-gray-400 truncate">
                                         {product.name}
                                     </h3>
                                 </div>
